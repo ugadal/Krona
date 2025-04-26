@@ -966,14 +966,9 @@ sub classifyBlast
 			$hitID,
 			$identity,
 			$length,
-			$mismatches,
-			$gaps,
-			$queryStart,
-			$queryEnd,
-			$subjectStart,
-			$subjectEnd,
 			$eVal,
-			$bitScore
+			$bitScore,
+			$COOtaxid
 		) = split /\t/, $line;
 		
 		if ( $queryID ne $lastQueryID )
@@ -1019,7 +1014,8 @@ sub classifyBlast
 		)
 		{
 			my $acc = getAccFromSeqID($hitID);
-			my $newTaxID = getTaxIDFromAcc($acc);
+			#~ my $newTaxID = getTaxIDFromAcc($acc);
+			my $newTaxID = $COOtaxid;
 			
 			if
 			(
