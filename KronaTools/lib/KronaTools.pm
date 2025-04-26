@@ -965,7 +965,6 @@ sub classifyBlast
 			$queryID,
 			$hitID,
 			$identity,
-			$length,
 			$eVal,
 			$bitScore,
 			$COOtaxid
